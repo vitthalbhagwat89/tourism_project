@@ -59,7 +59,7 @@ with mlflow.start_run(run_name='xgb_grid_workflow'):
   mlflow.sklearn.log_model(best, artifact_path='model')
 
 # Save the pipeline for deployment
-os.makedirs('tourism_project/deployment', exist_ok=True)
-joblib.dump(best, 'tourism_project/deployment/model.joblib')
-print('\nSaved trained model to tourism_project/deployment/model.joblib')
+os.makedirs('deployment', exist_ok=True)
+joblib.dump(best, 'deployment/model.joblib')
+print('\nSaved trained model to deployment/model.joblib')
 print('Model training and registration complete.')
